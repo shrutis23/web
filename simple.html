@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="text">Enter the string</label>
+    <input type="text" id="text">
+    <br><br>
+    <ul id="ullist">
+
+    </ul>
+    <input type="submit" id="submit" onclick="add()">
+
+</body>
+<script>
+    function add() {
+        let var1 = document.getElementById('text').value;
+        const liitem = document.createElement('li');
+        const ulist = document.getElementById('ullist');
+        const del = document.createElement("BUTTON");
+        const t = document.createTextNode("delete");
+        let stringarr = [];
+        let i;
+        stringarr.push(var1);
+        liitem.innerHTML = stringarr;
+        console.log(stringarr);
+        del.appendChild(t);
+        ullist.appendChild(liitem);
+        ullist.appendChild(del);
+        document.getElementById('text').value = " ";
+
+    }
+</script>
+
+</html>
